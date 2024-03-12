@@ -13,6 +13,7 @@
     <div id="app">
 
         <div class="container">
+
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
@@ -34,10 +35,14 @@
 
                 <div class="thumbs">
 
+                    <img src="thumb" alt="" v-for="thumb in slides.image">
+
                     <div class="prev" @click="showPrev"></div>
                     <div class="next" @click="showNext"></div>
                     <!-- /.Prev and Next buttons -->
 
+                    
+                    <!-- 
                     <div class="thumb active">
                         <img src="./assets/img/01.webp" alt="Spiderman" />
                     </div>
@@ -52,12 +57,14 @@
                     </div>
                     <div class="thumb">
                         <img src="./assets/img/05.webp" alt="Avengers" />
-                    </div>
+                    </div> 
+                     -->
                     <!-- /.thumbnail images -->
 
                 </div>
 
             </div>
+
         </div>
 
     </div>
