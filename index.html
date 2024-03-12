@@ -18,7 +18,8 @@
                 <div class="item">
 
                     <img :src="slides[activeImage].image" alt="">
-                    
+                    <!-- selected image -->
+
                     <div class="text">
                         <h3>
                             {{slides[activeImage].title}}
@@ -27,13 +28,18 @@
                             {{slides[activeImage].text}}
                         </p>
                     </div>
+                    <!-- /.image description -->
+
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+
+                    <div class="prev" @click="showPrev"></div>
+                    <div class="next" @click="showNext"></div>
+                    <!-- /.Prev and Next buttons -->
+
                     <div class="thumb active">
-                        <img src="./assets/img/01.webp" alt="Svezia" />
+                        <img src="./assets/img/01.webp" alt="Spiderman" />
                     </div>
                     <div class="thumb">
                         <img src="./assets/img/02.webp" alt="Ratchet & Clank" />
@@ -47,6 +53,8 @@
                     <div class="thumb">
                         <img src="./assets/img/05.webp" alt="Avengers" />
                     </div>
+                    <!-- /.thumbnail images -->
+
                 </div>
 
             </div>
