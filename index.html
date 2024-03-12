@@ -16,7 +16,9 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img src="./assets/img/01.webp" alt="Spiderman" />
+
+                    <img :src="slides[activeImage].image" alt="">
+                    
                     <div class="text">
                         <h3>
                             {{slides[activeImage].title}}
