@@ -13,11 +13,11 @@
     <div id="app">
 
         <div class="container">
-            <div class="slider-wrapper" tabindex="0">
+            <div class="slider-wrapper" tabindex="0" @mouseenter="stopAutoplay()" @mouseleave="startAutoplay()">
 
                 <div class="item">
 
-                    <img :src="slides[activeImage].image" alt="">
+                    <img :src="'./assets/' + slides[activeImage].image" alt="">
                     <!-- selected image -->
 
                     <div class="text">
@@ -34,24 +34,13 @@
 
                 <div class="thumbs">
 
-                    <div class="prev" @click="showPrev"></div>
-                    <div class="next" @click="showNext"></div>
+                    <div class="prev" @click="prev()"></div>
+                    <div class="next" @click="next()"></div>
                     <!-- /.Prev and Next buttons -->
 
-                    <div class="thumb active">
-                        <img src="./assets/img/01.webp" alt="Spiderman" />
-                    </div>
-                    <div class="thumb">
-                        <img src="./assets/img/02.webp" alt="Ratchet & Clank" />
-                    </div>
-                    <div class="thumb">
-                        <img src="./assets/img/03.webp" alt="Fortnite" />
-                    </div>
-                    <div class="thumb">
-                        <img src="./assets/img/04.webp" alt="Stray" />
-                    </div>
-                    <div class="thumb">
-                        <img src="./assets/img/05.webp" alt="Avengers" />
+                    <div class="thumb" :class="{'active': activeImage === index}" v-for="(slide, index) in slides"
+                        @click="activeImage = index">
+                        <img :src="'./assets/' + slide.image" alt="" />
                     </div>
                     <!-- /.thumbnail images -->
 
